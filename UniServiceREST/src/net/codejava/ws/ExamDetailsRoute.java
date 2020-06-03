@@ -29,7 +29,7 @@ public class ExamDetailsRoute {
 		//reading records
 		System.out.println("Reading records:");
 
-		ResultSet rs=st.executeQuery("select * from schedeDettagliateEsami");
+		ResultSet rs=st.executeQuery("select * from examDetails");
 		
 		return stringa(rs);
   }
@@ -38,8 +38,8 @@ public class ExamDetailsRoute {
   	ArrayList<String> a = new ArrayList<>();
 		
 		while(rs.next()){
-			a.add("{\"esame \": \"" +  rs.getString("esame") + "\""   
-					 + ",\"descrizione \": \"" +  rs.getString("descrizione") + "\""+ "}");
+			a.add("{\"exam \": \"" +  rs.getString("exam") + "\""   
+					 + ",\"description \": \"" +  rs.getString("description") + "\""+ "}");
 		} 
 		return a.toString();
   	
