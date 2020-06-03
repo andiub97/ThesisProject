@@ -189,7 +189,7 @@ function GetComunicationFromDB(day, year) {
   return new Promise((resolve, reject) => {
     var options = {
         host: '4a66c134.ngrok.io',
-        path: '/UniServiceREST/rest/getComunication', 
+        path: '/UniServiceREST/rest/getCommunications', 
         method: 'GET',
     };
     
